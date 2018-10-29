@@ -1,0 +1,176 @@
+*{
+	margin:0;
+	padding:0;
+	list-style: none;
+}
+/*两个小可爱的样式*/
+.header{
+	width: 1000px;
+	height: 50px;
+	margin: 0 auto;
+	
+}
+.header .left{float: left;}
+.header .right{float: right;}
+.header img{height: 40px;}
+
+/*导航栏样式*/
+nav{height70px;background-color:#3e3e3e;position:relative;z-index:9999;margin: 0 auto;}
+nav ul{height:70px;width:1000px;margin:0 auto;}
+nav ul li{height:70px;width:200px;text-align:center;font-size:16px;padding:0px 0;color:#fff;line-height:18px;cursor:pointer;float: left;
+}
+
+nav ul li:hover{background-color:#77c59e}
+nav ul li span{font-size:12px;color:#898989}
+nav ul ul {display:none;}
+nav ul li a {
+    display:block;
+    padding:15px 40px;
+    color:white;
+    text-decoration:none;
+    font-family:"微软雅黑";
+}
+
+nav ul li:hover ul {
+    display:block;
+}
+nav ul ul li {
+    float:none;
+    background:#3e3e3e; ;}
+
+/*轮播图片样式*/
+.main{
+	width:1000px; /*和图片一般大*/
+	height:425px;
+	margin:10px auto;
+	margin-top: 30px;
+	/*overflow: hidden; */ 
+	position:relative; /*后面按钮定位需要*/
+}
+.banner{
+	width:1000px; /*和图片一般大*/
+	height:425px;
+/*	overflow: hidden;*/
+}
+.banner-slide{
+	width:1000px; /*和图片一般大*/
+	height:425px;
+/*	background-repeat:no-repeat;*/
+	display: none;
+}
+.slide-active{
+	display:block;
+}
+.slide1{
+	background-image: url(../img/g1.jpg);	
+}
+.slide2{
+	background-image: url(../img/g4.jpg);
+}
+.slide3{
+	background-image: url(../img/g6.jpg);
+}
+/*上一张/下一张按钮样式*/
+.button{
+	/*图片的宽和高的设置*/
+	width:40px;  
+	height: 80px;
+	/*设置背景图片*/
+	background:url(../img/arrow.png) no-repeat center center;
+	/*按钮图片的定位*/
+	position:absolute;  /*基于父盒子main的定位*/
+	left:0px;
+	top:50%;
+	margin-top:-40px; /*自身高的一半*/
+}
+.button:hover{
+	/*此处不能直接写background,如果这样,背景颜色会覆盖上面设置的背景图片*/
+	background-color:#333; /*只改变背景颜色*/
+	opacity: 0.2; /*背景颜色透明度设置,值越小越透明*/
+}
+.prev{
+	transform:rotate(180deg);  /*图片旋转180度，CSS3中的属性*/
+}
+.next{
+	left:auto;
+	right:0;
+}
+/*圆点导航样式*/
+/*圆点位于图片上，因此需要进行定位设置*/
+.dots{
+	width: 900px;
+	height: 10px;
+	margin: 0 auto;
+	padding-left:450px;
+	padding-top:20px;
+	
+}
+.dots span{
+	display:inline-block;
+	width:12px;
+	height:12px;
+	border-radius:50%;
+	background:grey;
+	border:1px solid #fff;
+	margin-left:8px;
+	cursor:pointer;	
+}
+.dots .active{
+	background:cornflowerblue;
+	width:20px;
+	height:12px;
+}
+/*学习简介样式*/
+#learn{
+	width: 1000px;
+	margin: 0 auto;
+}
+
+#learn h2{
+	font-weight:100 ;
+	font-size: 24px;
+	color: #585858;
+	padding: 20px 0;
+	border-bottom:7px solid #ececec ;
+}
+#learn dl{
+	width: 1000px;
+	height: 380px;
+	margin-top: 10px;
+}
+#learn dt{
+	width: 340px;
+	height: 370px;
+	background: url(../img/new.jpg);
+	float: left;
+}
+#learn dd{
+	width: 570px;
+	padding: 20px 0 0 30px;
+	float: left;
+}
+#learn .txt1 {
+	font-size: 24px;
+}
+#learn .txt1 span{
+	font-size: 20px;
+	color: gray;
+}
+#learn .txt2{
+	color: #585858;
+	line-height: 24px;
+}
+/*无缝滚动*/
+/*.imgbox{
+	width: 860px;
+	padding: 0 20px;
+	white-space: nowrap;	
+	使图片不换行
+	overflow: :hidden;
+}
+.imgbox img{
+	width: 226px;
+	height: 129px;
+	padding: 2px;
+}
+.imgbox a{margin-right: 20px;}*/
